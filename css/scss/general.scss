@@ -1,0 +1,60 @@
+$first-back-color: #cccccc;
+$second-back-color: #cccccc;
+$second-font-color: #333333;
+$font-size-link: 1.1rem;
+$img-path: "../img/";
+$fonts-path: "../fonts/";
+
+$desktop-width: 1024px;
+
+@mixin tablet {
+  @media (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+a {
+  text-decoration: underline;
+  color: $second-font-color;
+  &:hover {
+    color: $second-font-color;
+  }
+}
+
+h1, h2 {
+  color: #fff;
+  font-family: 'Ubuntu', sans-serif;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  @include desktop {
+    font-size: 3.5rem;
+  }
+}
+
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  @include desktop {
+    font-size: 1.6rem;
+  }
+}
+
+p {
+  font-weight: 400;
+  font-family: 'Ubuntu Mono', sans-serif;
+}
+ul {
+  padding-left: 0;
+  list-style: none;
+}
