@@ -1,6 +1,5 @@
 .header {
     position: relative;
-    padding-top: 50px;
 
     width: 100%;
     height: 100vh;
@@ -18,6 +17,81 @@
     }
 }
 
+.navbar {
+  height: 50px;
+  background-color: #808080;
+  z-index: 999;
+  padding: 0;
+
+}
+
+.custom-toggler .navbar-toggler-icon {
+  color: #f2f2f2;
+  font-size: 2rem;
+  height: 50px;
+  line-height: 3rem;
+}
+
+.custom-toggler.navbar-toggler {
+  border: none;
+  margin-left: 10px;
+  padding: 0;
+  &:focus {
+    outline: none;
+  }
+}
+
+.navbar-collapse {
+  background-color: #808080;
+  width: 100%;
+}
+
+.language-switcher {
+  position: absolute;
+  right: 10px;
+  width: auto;
+  flex-direction: row;
+
+  a.nav-link {
+    text-decoration: underline;
+    padding: 0.5rem;
+    color: rgba(249, 249, 249, 1);
+    font-size: 1.1rem;
+
+    @include desktop {
+      font-size: 1.5rem;
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: rgba(249, 249, 249, 0.8);
+    }
+    &:active {
+      color: rgba(249, 249, 249, 0.8);
+    }
+  }
+}
+
+a.nav-link {
+  text-decoration: none;
+  color: #333333;
+  font-size: 1.33rem;
+
+  @include desktop {
+    font-size: 1.65rem;
+  }
+
+  font-family: "PT Sans";
+  font-weight: 700;
+
+  &:hover {
+    text-decoration: underline;
+    color: #e0e90f;
+  }
+  &:active {
+    color: #cccccc;
+  }
+}
 .header__logo {
   position: absolute;
   width: 90px;
