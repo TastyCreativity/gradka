@@ -22,8 +22,13 @@
   background-color: #808080;
   z-index: 999;
   padding: 0;
-
-
+  position: fixed;
+  top:0;
+  left: 0;
+  right:0;
+  @include desktop {
+    background-color: transparent;
+  }
 }
 
 .custom-toggler .navbar-toggler-icon {
@@ -43,9 +48,9 @@
 }
 
 .navbar-collapse {
-  background-color: #808080;
   width: 100%;
   padding: 0 30px;
+  background-color: #808080;
 }
 
 .language-switcher {
@@ -56,9 +61,12 @@
 
   a.nav-link {
     text-decoration: underline;
-    padding: 0.5rem;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
     color: rgba(249, 249, 249, 1);
     font-size: 1.1rem;
+    font-weight: 400;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
 
     @include desktop {
       font-size: 1.5rem;
@@ -73,18 +81,28 @@
     }
   }
 }
+#switcher .language-switcher__item_active {
+  pointer-events: none;
+  cursor: default;
+  color: #DDD9D5;
+  text-decoration: none;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+}
 
-a.nav-link {
+#navbarNav a.nav-link {
   text-decoration: none;
   color: #333333;
   font-size: 1.33rem;
+  font-family: "PT Sans";
+  font-weight: 700;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 
   @include desktop {
     font-size: 1.65rem;
   }
-
-  font-family: "PT Sans";
-  font-weight: 700;
 
   &:hover {
     text-decoration: underline;
@@ -94,6 +112,7 @@ a.nav-link {
     color: #cccccc;
   }
 }
+
 .header__logo {
   position: absolute;
   width: 90px;
