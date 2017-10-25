@@ -50,10 +50,16 @@ h2 {
   }
 }
 
+
 p {
+  font-family: "PT Sans", sans-serif;
   font-weight: 400;
-  font-family: 'Ubuntu Mono', sans-serif;
+  font-size: 0.92rem;
+  @include desktop {
+    font-size: 1.05rem;
+  }
 }
+
 ul {
   padding-left: 0;
   list-style: none;
