@@ -9655,7 +9655,7 @@ ul {
   top: 60%;
   left: calc(50% - 80px);
   font-weight: 400;
-  font-family: 'Ubuntu Mono', sans-serif; }
+  font-family: 'Ubuntu', sans-serif; }
   @media (min-width: 1024px) {
     .header__slogan {
       top: 65%;
@@ -9685,8 +9685,7 @@ ul {
 
 .about-us {
   padding: 8vh 0;
-  max-width: 80%;
-  border: 1px solid black; }
+  max-width: 80%; }
   @media (min-width: 1024px) {
     .about-us {
       max-width: 800px;
@@ -9717,16 +9716,17 @@ ul {
 
 .article__title {
   font-family: "Ubuntu";
-  font-weight: 700;
-  font-size: 1.58em;
+  font-weight: 500;
+  font-size: 1.58rem;
   color: #333333;
   margin-bottom: 1.2rem; }
   @media (min-width: 1024px) {
     .article__title {
-      font-size: 2em; } }
+      font-size: 2rem; } }
 
 .article__text {
-  line-height: 1.5rem; }
+  line-height: 1.5rem;
+  color: #333333; }
 
 .article__img {
   height: 100%; }

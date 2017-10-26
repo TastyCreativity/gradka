@@ -1,7 +1,7 @@
 .about-us{
   padding: 8vh 0;
   max-width: 80%;
-  border: 1px solid black;
+  //border: 1px solid black;
   @include desktop {
     max-width: 800px;
     padding: 70px 0;
@@ -18,7 +18,7 @@
   padding: 20px;
   height: 100%;
   @include desktop {
-    height: 155px;    
+    height: 155px;
     padding: 5px 0;
   }
 }
@@ -37,17 +37,19 @@
 
 .article__title {
   font-family: "Ubuntu";
-  font-weight: 700;
-  font-size: 1.58em;
+  font-weight: 500;
+  font-size: 1.58rem;
   color: #333333;
+
   margin-bottom: 1.2rem;
   @include desktop {
-    font-size: 2em;
+    font-size: 2rem;
   }
 }
 
 .article__text {
   line-height: 1.5rem;
+  color: #333333;
 }
 
 .article__img {
