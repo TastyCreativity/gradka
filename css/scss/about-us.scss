@@ -1,9 +1,9 @@
 .about-us{
   padding: 8vh 0;
-  max-width: 80%;
-  //border: 1px solid black;
+  width: 80%;
+
   @include desktop {
-    max-width: 800px;
+    width: 800px;
     padding: 70px 0;
   }
 }
@@ -18,8 +18,7 @@
   padding: 20px;
   height: 100%;
   @include desktop {
-    height: 155px;
-    padding: 5px 0;
+    padding: 5px 10px 5px 20px;
   }
 }
 
@@ -53,18 +52,7 @@
 }
 
 .article__img {
-  height: 100%;
-  @include desktop {
-    height: 255px;
-  }
-}
-.article__img.right {
-  @include desktop {
-    padding-left: 40px;
-  }
-}
-.article__img.left {
-  @include desktop {
-    padding-right: 40px;
-  }
+  align-self: center;
+  width: 90%;
+  height: auto;
 }
