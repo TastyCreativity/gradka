@@ -15,30 +15,47 @@
 }
 
 .title__image {
-  padding: 20px;
-  height: 100%;
+  justify-content: center;
+  padding-bottom: 20px;
   @include desktop {
-    padding: 5px 10px 5px 20px;
+    padding: 7px 10px 7px 20px;
+  }
+  img {
+    width: 100%;
+    max-width: 250px;
+    height: 100%;
   }
 }
 
 .title__text {
   color: #333333;
-  padding: 0.875rem;
+  padding: 1.875rem;
   line-height: 1.2rem;
   margin: 0;
   text-align: left;
+
+  @include desktop {
+    padding: 0.875rem;
+  }
 }
 
 .about-us__main.article {
   margin-top: 50px;
 }
 
+.article__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  @include desktop {
+    align-items: flex-end;
+  }
+}
 .article__title {
   font-family: "Ubuntu";
   font-weight: 500;
   font-size: 1.58rem;
   color: #333333;
+  width: 95%;
 
   margin-bottom: 1.2rem;
   @include desktop {
@@ -47,12 +64,31 @@
 }
 
 .article__text {
-  line-height: 1.5rem;
   color: #333333;
+  width: 95%;
 }
 
 .article__img {
   align-self: center;
-  width: 90%;
-  height: auto;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  @include desktop {
+    margin-top: 0;
+    justify-content: flex-start;
+  }
+
+  img {
+    width: 95%;
+    height: 100%;
+    max-width: 500px;
+  }
+
+}
+
+.img-right {
+  justify-content: center;
+  @include desktop {
+    justify-content: flex-end;
+  }
 }
