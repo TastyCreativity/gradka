@@ -3,7 +3,7 @@
   padding: 8vh 0;
 
   @include desktop {
-    padding: 45px 0 35px 0;
+    padding: 55px 0 60px 0;
   }
 
   .container {
@@ -19,6 +19,16 @@
   margin-bottom: 35px;
   @include desktop {
     font-size: 1.9rem;
+  }
+}
+.work-description {
+  @include desktop {
+    padding-left: 53px;
+  }
+}
+.work-description:first-child {
+  @include desktop {
+    padding-left: 0px;
   }
 }
 
@@ -41,6 +51,7 @@
   font-weight: 700;
   font-size: 0.92rem;
   line-height: 1.1rem;
+  margin-bottom: 0;
   dd {
     margin: 0;
     &:before {
@@ -59,7 +70,16 @@
   height: 20vw;
   max-height: 115px;
   margin-bottom: 10px;
+
   @include desktop {
-    margin-left: -50px;
+    margin-left: 20px;
+
+  }
+}
+.our-work__title-image:first-child {
+
+  @include desktop {
+    margin-left: 0px;
+    padding: 0;
   }
 }
