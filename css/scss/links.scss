@@ -160,11 +160,15 @@
     transition:
     padding 0.2s 0.2s,
     font-size 0.3s;
+
 }
 
 a.links__show {
   padding: 12px 30px;
   font-size: 1rem;
+  &:last-child {
+    padding-bottom: 20px;
+  }
   @include desktop {
     font-size: 1.33rem;
   }
