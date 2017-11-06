@@ -1,0 +1,133 @@
+.history {
+  background-color: #f2f2f2;
+  padding: 8vh 0 0 0;
+
+  @include desktop {
+    padding: 55px 0 0 0;
+  }
+
+  .container {
+    width: 80%;
+    padding-right: 0;
+    padding-left: 0;
+    @include desktop {
+      width: 800px;
+    }
+  }
+  .button {
+    box-shadow: 0px 2px 2px #999;
+    margin-bottom: 4px;
+    margin-top: 75px;
+  }
+}
+
+.history__title {
+  font-size: 1.58rem;
+  color: #333333;
+  text-shadow: none;
+
+  @include desktop {
+    font-size: 1.9rem;
+  }
+}
+.history__text {
+  font-size: 0.92rem;
+  color: #333333;
+  text-align: left;
+  background-color: rgba(#ffff00, 0.7);
+  padding: 5px 15px;
+  @include desktop {
+    font-size: 1.05rem;
+  }
+  h3 {
+    padding-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.38rem;
+  }
+  &:first-child {
+    background-color: transparent;
+    padding-top: 60px;
+    padding-bottom: 20px;
+  }
+}
+
+
+.history__image {
+  padding: 5vh 0;
+  width: 100%;
+  height: auto;
+  align-self: center;
+  @include desktop {
+    padding: 0;
+  }
+}
+.history__carousel {
+  margin-top: 70px;
+}
+
+.history__carousel-indicators {
+  background-color: #b3b3b3;
+  bottom: 0;
+  margin: 0 5px;
+  justify-content: flex-end;
+
+  li {
+      text-indent: unset;
+      cursor: pointer;
+      font-family: "Ubuntu", sans-serif;
+      font-weight: 400;
+      color: #333333;
+      font-size: 2.66rem;
+      color: #999999;
+  }
+  li.disabled {
+    cursor: default;
+    color: #999999;
+  }
+  li.active {
+    color: #ffff00;
+    background-color: transparent;
+  }
+}
+.history__navigation {
+
+  position: absolute;
+  right: 0;
+  height: 40px;
+  overflow: hidden;
+  top: 0;
+  z-index: 999;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  ol {
+    position: relative;
+    width: 80%;
+    overflow: hidden;
+
+    li {
+      width: auto;
+      height: auto;
+      background-color: transparent;
+      pointer-events: none;
+      margin: 0 5px;
+      &:before {
+        content: none;
+      }
+      &:after {
+        content: none;
+      }
+    }
+  }
+  .carousel-control-prev {
+    position: relative;
+    width: auto;
+
+  }
+  .carousel-control-next {
+    position: relative;
+    width: auto;
+  }
+}
