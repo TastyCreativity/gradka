@@ -110,6 +110,11 @@
   @include desktop {
     font-size: 1.65rem;
   }
+  @media (max-width: 440px)
+  {
+    font-size: 1.4rem;
+    line-height: 1.5rem;
+  }
   &:focus {
     outline: 0;
   }
