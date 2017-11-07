@@ -2,7 +2,7 @@
   background-color: #b3b3b3;
   padding: 8vh 0;
   @include desktop {
-    padding: 55px 0 60px 0;
+    padding: 55px 0 55px 0;
   }
 
   .container {
@@ -60,7 +60,11 @@
       font-size: 1.65rem;
     }
   }
+  &.button {
+    margin-top: 25px;
+  }
 }
+
 
 .links__image {
   height: auto;

@@ -237,8 +237,14 @@
               <button class="links__dropbtn" id="links__dropdown-button"><span>карысныя спасылкi</span></button>
               <div class="links__dropdown-content" id="links__dropdown-content">
                 <a href="https://be.wikipedia.org/wiki/Creative_Commons" target="_blank">Пра арганізацыю Творчых Суполак у Вікіпедыі</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
+                <a href="https://wiki.creativecommons.org/wiki/Belarus">Афіцыйная вікі-старонка філіяла арганізацыі Творчых Суполак (Creative Commons) у Беларусі</a>
+                <a href="https://www.kv.by/content/330699-smogut-li-belorusy-vkusit-plody-tvorcheskikh-obshchin">Даследванне CC - Частка 1</a>
+                <a href="https://www.kv.by/content/331481-smogut-li-belorusy-vkusit-plody-tvorcheskikh-obshchin-prodolzhenie">Даследванне СС - Частка 2</a>
+                <a href="https://pirates.by/blog/rizoma/195">Аналітыка: Асноўныя перашкоды капирайта - Частка 1</a>
+                <a href="https://pirates.by/blog/rizoma/196">Аналітыка: Асноўныя перашкоды капирайта - Частка 2</a>
+                <a href="https://www.slideshare.net/mlug/creative-commons40-31295426">Прэзентацыя перапіскі з дзярж. органамі і навінак Creative Commons </a>
+                <a href="https://www.kv.by/content/332002-atributsiya-proizvedenii-v-internete">Атрыбуцыя (абазначэнне) твораў у сеціве</a>
+                <a href="http://naviny.by/article/20170830/1504085870-mihail-volchek-piraty-otkrytye-licenzii-i-zakrytyy-process">Адкрытыя ліцэнзіі і зактрыты працэс</a>
               </div>
             </div>
           </div>
@@ -252,24 +258,26 @@
 
         <div id="history__carousel" class="history__carousel carousel slide" data-interval="false" data-ride="false" data-wrap="false">
           <div class="col-lg-6 history__navigation">
-            <a class="carousel-control-prev" href="#history__carousel" role="button" data-slide="prev">
+            <a class="carousel-control-prev history__navigation_prev" href="#history__carousel" role="button" data-slide="prev">
              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
              <span class="sr-only">Previous</span>
             </a>
             <ol class="carousel-indicators history__carousel-indicators">
-              <!--<li class="disabled">2013</li>-->
-              <li data-target="#history__carousel" data-slide-to="0">2014</li>
-              <li data-target="#history__carousel" data-slide-to="1">2015</li>
-              <li data-target="#history__carousel" data-slide-to="2">2016</li>
-              <li data-target="#history__carousel" data-slide-to="3" class="active">2017</li>
-              <!--<li class="disabled">2018</li>-->
+              <li data-target="#history__carousel" >2013</li>
+              <li data-target="#history__carousel" >2014</li>
+              <li data-target="#history__carousel" >2015</li>
+              <li data-target="#history__carousel" >2016</li>
+              <li data-target="#history__carousel" class="active">2017</li>
+              <li data-target="#history__carousel" >2018</li>
             </ol>
-            <a class="carousel-control-next" href="#history__carousel" role="button" data-slide="next">
+            <a class="carousel-control-next history__navigation_next disabled" href="#history__carousel" role="button" data-slide="next">
              <span class="carousel-control-next-icon" aria-hidden="true"></span>
              <span class="sr-only">Next</span>
             </a>
           </div>
           <div class="carousel-inner" role="listbox">
+            <div class="carousel-item">
+            </div>
             <div class="carousel-item">
               <div class="row flex-lg-row-reverse">
                 <div class="col-lg-6">
@@ -361,6 +369,8 @@
                 </div>
               </div>
             </div>
+            <div class="carousel-item">
+            </div>
           </div>
         </div>
       </div>
@@ -369,6 +379,29 @@
     </section>
 
     <section class="contact-us">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5">
+              <h2 class="contact-us__title">Кантакты</h2>
+              <p class="contact-us__text">
+                <span class="contact-us__text_header">Знайсці нас можна  у офісе па адрасу:</span>
+                г.Мінск, вул.Захарава, 77а, пам.1Н, пак. 2 б (5 пад'езд,  металічныя дзверы злева з паштовай скрыняй, уніз па прыступках і дзверы направа, на вакне таблічка "Фаланстэр" - усё прасцей, чым здаецца:)
+              </p>
+              <p class="contact-us__text contact-us__text_breaked">
+                <span class="contact-us__text_header">Па любым пытанням звяртайцеся:</span>
+                  Тэлефон +375 29 860 23 12</br>
+                  Пошта: falanster.by@gmail.com </br>
+                  Сайт: https://falanster.by  </br>
+                  Facebook https://www.facebook.com/groups/1675631576015100/  </br>
+              </p>
+          </div>
+          <div class="col-lg-7">
+              <p class="contact-us__map">
+                <iframe frameborder="0" height="300px" marginheight="0" marginwidth="0" scrolling="no" src="https://www.openstreetmap.org/export/embed.html?bbox=27.583547830581665%2C53.894015121206365%2C27.595521211624146%2C53.897884187603246&amp;layer=mapnik&amp;marker=53.895949699184506%2C27.589534521102905" width="100%"></iframe>
+              </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <footer class="footer">
@@ -432,8 +465,8 @@
       src="https://code.jquery.com/jquery-3.2.1.min.js"
       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
       crossorigin="anonymous"></script>
-  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>-->
   <script src="js/main.js"></script>
   <script src="js/bootstrap.min.js"></script>
+
 
 </html>
