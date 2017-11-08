@@ -1,6 +1,6 @@
 .contact-us {
   background-color: #ffffff;
-  padding: 8vh 0 0 0;
+  padding: 8vh 0 8vh 0;
 
   @include desktop {
     padding: 50px 0 60px 0;
@@ -43,14 +43,19 @@
 
 .contact-us__text_breaked {
   word-break: break-all;
-  margin-bottom: 0;
   a {
     display: block;
     text-decoration: none;
   }
-
+  @include desktop {
+    margin-bottom: 0;
+  }
 }
 .contact-us__map {
-    height: calc(100% - 5px);
-    margin-top: 5px;
+    margin-bottom: 0;
+    height: 300px;
+    @include desktop {
+      height: calc(100% - 5px);
+      margin-top: 5px;
+    }
 }
