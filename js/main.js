@@ -1,7 +1,7 @@
 function calculateIndicators () {
     var carouselItems = $('ol.carousel-indicators li');
     var active_index = $('ol li.active').index();
-    
+
     carouselItems.each(function(index, el) {
         if(((active_index - index) <= 1) && ((active_index - index) >= -1))
             $( this ).css("display", "block");
@@ -18,7 +18,7 @@ $(document).ready(function () {
             if ($(window).scrollTop() == 0) {
               $('.navbar').css('background-color', 'rgba(128, 128, 128, 1)');
             } else {
-              $('.navbar').css('background-color', 'rgba(128, 128, 128, 0.2)');
+              $('.navbar').css('background-color', 'rgba(128, 128, 128, 0.5)');
             }
           }
         })
@@ -72,8 +72,14 @@ $(document).ready(function () {
       else {
         $('.history__navigation_prev').removeClass('disabled');
       }
-      
+
       return false;
+    });
+
+    $('.nav-item a.nav-link').click(function() {
+        if($('#navbarNav').hasClass('show')){
+            $('#navbarNav').removeClass('show');
+        }
     });
 
     $('a.nav-link[href*="#"]')
@@ -93,21 +99,24 @@ $(document).ready(function () {
         // Does a scroll target exist?
         if (target.length) {
           // Only prevent default if animation is actually gonna happen
+          var top = target.offset().top;
           event.preventDefault();
-          var top = target.offset().top - 50;
+          if($(window).width() < 1024)
+            top = top - 50;
+
           $('html, body').animate({
             scrollTop: top
           }, 1000, function() {
             // Callback after animation
             // Must change focus!
-            var $target = $(target);
-            $target.focus();
-            if ($target.is(":focus")) { // Checking if the target was focused
-              return false;
-            } else {
-              $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-              $target.focus(); // Set focus again
-            };
+            // var $target = $(target);
+            // $target.focus();
+            // if ($target.is(":focus")) { // Checking if the target was focused
+              // return false;
+            // } else {
+              // $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+              // $target.focus(); // Set focus again
+            // };
           });
         }
       }
