@@ -1,3 +1,17 @@
+function calculateIndicators () {
+    var carouselItems = $('ol.carousel-indicators li');
+    var active_index = $('ol li.active').index();
+    
+    carouselItems.each(function(index, el) {
+        if(((active_index - index) <= 1) && ((active_index - index) >= -1))
+            $( this ).css("display", "block");
+        else
+            $( this ).css("display", "none");
+    });
+    return active_index;
+}
+document.addEventListener("DOMContentLoaded", calculateIndicators);
+
 $(document).ready(function () {
         $(window).scroll(function () {
           if ($(window).width() >= 1024) {
@@ -25,27 +39,20 @@ $(document).ready(function () {
       }
     }
 
-    var $carouselItems = $('ol.carousel-indicators li');
+
 
     $('.history__navigation_prev').click(function(e) {
-      e.stopPropagation();
-      if($carouselItems.eq(1).hasClass('active')) {
+
+       e.stopPropagation();
+       $('#history__carousel').carousel('prev');
+
+       var active_index = calculateIndicators();
+
+      if(active_index == 1) {
         $(this).addClass('disabled');
         return false;
       }
       else {
-      $('.history__navigation_next').removeClass('disabled');
-      }
-
-      $carouselItems.each(function(index, el) {
-        var pos = $(this).offset().left;
-        var width = $(this).outerWidth(true);
-        $( this ).offset({ left : pos + width});
-      });
-
-      $('#history__carousel').carousel('prev');
-      if($carouselItems.eq(1).hasClass('active')) {
-        $(this).addClass('disabled');
         $('.history__navigation_next').removeClass('disabled');
       }
 
@@ -53,27 +60,19 @@ $(document).ready(function () {
     });
 
     $('.history__navigation_next').click(function(e) {
-      e.stopPropagation();
+       e.stopPropagation();
+       $('#history__carousel').carousel('next');
 
-      if($carouselItems.eq($carouselItems.length - 2).hasClass('active')) {
+       var active_index = calculateIndicators();
+
+      if(active_index == ($('ol.carousel-indicators li').length - 2)) {
         $(this).addClass('disabled');
         return false;
       }
       else {
-      $('.history__navigation_prev').removeClass('disabled');
-      }
-
-      $carouselItems.each(function(index, el) {
-        var pos = $(this).offset().left;
-        var width = $(this).outerWidth(true);
-        $( this ).offset({ left : pos - width});
-      });
-
-      $('#history__carousel').carousel('next');
-      if($carouselItems.eq($carouselItems.length - 2).hasClass('active')) {
-        $(this).addClass('disabled');
         $('.history__navigation_prev').removeClass('disabled');
       }
+      
       return false;
     });
 
@@ -90,13 +89,14 @@ $(document).ready(function () {
       ) {
         // Figure out element to scroll to
         var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        target = target.length ? target : $('[id=' + this.hash.slice(1) + ']');
         // Does a scroll target exist?
         if (target.length) {
           // Only prevent default if animation is actually gonna happen
           event.preventDefault();
+          var top = target.offset().top - 50;
           $('html, body').animate({
-            scrollTop: target.offset().top
+            scrollTop: top
           }, 1000, function() {
             // Callback after animation
             // Must change focus!
@@ -113,16 +113,12 @@ $(document).ready(function () {
       }
     });
 
-
-  var backTopElem = document.createElement('div');
-  backTopElem.className = "back-top";
-  document.body.appendChild(backTopElem);
-
-
-	$(".back-top").hide();
-
-	// fade in #back-top
 	$(function () {
+        var backTopElem = document.createElement('div');
+        backTopElem.className = "back-top";
+        document.body.appendChild(backTopElem);
+        $(".back-top").hide();
+
 		$(window).scroll(function () {
 			if ($(this).scrollTop() > 1000) {
 				$('.back-top').fadeIn();
@@ -131,7 +127,6 @@ $(document).ready(function () {
 			}
 		});
 
-		// scroll body to 0px on click
 		$('.back-top').click(function () {
 			$('body,html').animate({
 				scrollTop: 0
@@ -139,7 +134,4 @@ $(document).ready(function () {
 			return false;
 		});
 	});
-
-
-
 });

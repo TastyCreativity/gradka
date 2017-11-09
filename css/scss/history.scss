@@ -37,10 +37,13 @@
   color: #333333;
   text-align: left;
   background-color: rgba(#ffff00, 0.7);
-  padding: 5px 15px;
+  padding: 5px 0px;
+
   @include desktop {
     font-size: 1.05rem;
+    padding: 5px 15px;
   }
+
   h3 {
     padding-top: 10px;
     margin-bottom: 10px;
@@ -100,6 +103,7 @@
   li.active {
     color: #ffff00;
     background-color: transparent;
+    display: block;
   }
 }
 .history__navigation {
@@ -120,7 +124,6 @@
   @media (max-width: 520px) {
     left: 0;
     justify-content: center;
-
   }
 
   @include desktop {
@@ -131,9 +134,7 @@
     position: relative;
     width: 80%;
     overflow: hidden;
-    @media (max-width: 520px) {
-      width: 186px;
-    }
+
 
     li {
       width: 33.333%;
@@ -141,17 +142,19 @@
       background-color: transparent;
       pointer-events: none;
       margin: 0 8px;
+      display: none;
 
       @include desktop {
         margin: 0 5px;
 
       }
 
-      @media (max-width: 520px) {
-        font-size: 1.6rem;
-        margin: 0 2px;
-
+      @media (max-width: 515px) {
+        font-size: 1.7rem;
+        letter-spacing: -0.1em;
+        margin: 0;
       }
+
       &:before {
         content: none;
       }
