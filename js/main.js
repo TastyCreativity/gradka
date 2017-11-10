@@ -10,9 +10,13 @@ function calculateIndicators () {
     });
     return active_index;
 }
+
+
 document.addEventListener("DOMContentLoaded", calculateIndicators);
 
 $(document).ready(function () {
+
+
         $(window).scroll(function () {
           if ($(window).width() >= 1024) {
             if ($(window).scrollTop() == 0) {
@@ -55,6 +59,7 @@ $(document).ready(function () {
       else {
         $('.history__navigation_next').removeClass('disabled');
       }
+
 
       return false;
     });
