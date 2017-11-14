@@ -38,6 +38,7 @@
 }
 .contact-us__text > .contact-us__text_header {
   font-weight: bold;
+  word-break: normal;
   display: block;
 }
 
@@ -57,5 +58,10 @@
     @include desktop {
       height: calc(100% - 5px);
       margin-top: 5px;
+    }
+    .frame__map {
+      border: none;
+      height: 100%;
+      width: 100%;
     }
 }
