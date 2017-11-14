@@ -2,11 +2,16 @@ function calculateIndicators () {
     var carouselItems = $('ol.carousel-indicators li');
     var active_index = $('ol li.active').index();
 
+    if((carouselItems.length - active_index) == 2)
+      $('.history__navigation_next').addClass("disabled");
+
     carouselItems.each(function(index, el) {
         if(((active_index - index) <= 1) && ((active_index - index) >= -1))
             $( this ).css("display", "block");
-        else
-            $( this ).css("display", "none");
+        else {
+          $( this ).css("display", "none");
+        }
+
     });
     return active_index;
 }
@@ -59,8 +64,6 @@ $(document).ready(function () {
       else {
         $('.history__navigation_next').removeClass('disabled');
       }
-
-
       return false;
     });
 
