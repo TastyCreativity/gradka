@@ -48,6 +48,11 @@
   height: 40px;
   background-position: -30px 0;
   background-size: 120px 40px;
+  @media (-moz-touch-enabled: 1), (pointer:coarse) {
+    &:hover {
+        cursor: pointer;
+    }
+  }
 }
 
 .carousel-control-prev {
