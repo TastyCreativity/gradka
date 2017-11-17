@@ -48,19 +48,24 @@
   height: 40px;
   background-position: -30px 0;
   background-size: 120px 40px;
-  @media (-moz-touch-enabled: 1), (pointer:coarse) {
-    &:hover {
-        cursor: pointer;
-    }
-  }
+
 }
 
+
 .carousel-control-prev {
-  &:hover {
+  &:active {
     .carousel-control-prev-icon {
         background-position: 0 0;
     }
   }
+  @include desktop {
+    &:hover {
+      .carousel-control-prev-icon {
+          background-position: 0 0;
+      }
+    }
+  }
+
   opacity: 1;
 }
 
@@ -73,9 +78,16 @@
 }
 
 .carousel-control-next {
-  &:hover {
+  &:active {
     .carousel-control-next-icon {
         background-position: -90px 0;
+    }
+  }
+  @include desktop {
+    &:hover {
+      .carousel-control-next-icon {
+          background-position: -90px 0;
+      }
     }
   }
   opacity: 1;

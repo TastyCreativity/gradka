@@ -129,3 +129,8 @@ a.button {
   transition: background-color .3s,
   opacity .5s, visibility .5s;
 }
+
+.hover {
+-webkit-user-select: none;
+-webkit-touch-callout: none;        
+}

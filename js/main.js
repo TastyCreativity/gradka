@@ -1,3 +1,5 @@
+
+
 function calculateIndicators () {
     var carouselItems = $('ol.carousel-indicators li');
     var active_index = $('ol li.active').index();
@@ -20,7 +22,6 @@ function calculateIndicators () {
 document.addEventListener("DOMContentLoaded", calculateIndicators);
 
 $(document).ready(function () {
-
 
         $(window).scroll(function () {
           if ($(window).width() >= 1024) {
@@ -50,9 +51,10 @@ $(document).ready(function () {
 
 
 
-    $('.history__navigation_prev').click(function(e) {
+    $('.history__navigation_prev').on("click",function(e) {
 
-       e.stopPropagation();
+      e.stopPropagation();
+
        $('#history__carousel').carousel('prev');
 
        var active_index = calculateIndicators();
@@ -91,22 +93,17 @@ $(document).ready(function () {
     });
 
     $('a.nav-link[href*="#"]')
-    // Remove links that don't actually link to anything
     .not('[href="#"]')
     .not('[href="#0"]')
     .click(function(event) {
-      // On-page links
       if (
         location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
         &&
         location.hostname == this.hostname
       ) {
-        // Figure out element to scroll to
         var target = $(this.hash);
         target = target.length ? target : $('[id=' + this.hash.slice(1) + ']');
-        // Does a scroll target exist?
         if (target.length) {
-          // Only prevent default if animation is actually gonna happen
           var top = target.offset().top;
           event.preventDefault();
           if($(window).width() < 1024)
@@ -115,16 +112,6 @@ $(document).ready(function () {
           $('html, body').animate({
             scrollTop: top
           }, 1000, function() {
-            // Callback after animation
-            // Must change focus!
-            // var $target = $(target);
-            // $target.focus();
-            // if ($target.is(":focus")) { // Checking if the target was focused
-              // return false;
-            // } else {
-              // $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-              // $target.focus(); // Set focus again
-            // };
           });
         }
       }
