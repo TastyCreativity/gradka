@@ -1,5 +1,3 @@
-
-
 function calculateIndicators () {
     var carouselItems = $('ol.carousel-indicators li');
     var active_index = $('ol li.active').index();
@@ -18,7 +16,6 @@ function calculateIndicators () {
     return active_index;
 }
 
-
 document.addEventListener("DOMContentLoaded", calculateIndicators);
 
 $(document).ready(function () {
@@ -31,14 +28,28 @@ $(document).ready(function () {
               $('.navbar').css('background-color', 'rgba(128, 128, 128, 0.5)');
             }
           }
-        })
-
-
+        });    
+      
       $('#links__dropdown-button').click(function() {
         $('#links__dropdown-content a').toggleClass("links__show");
       });
-
-
+      
+      //map activating on click
+/*        $('.contact-us__map').click(function() {
+         $('.map__overlay').css('pointer-events','none');
+      });
+      $('.contact-us__map').mouseleave(function() {
+         $('.map__overlay').css('pointer-events','auto');
+      }); */  
+      //map activating auto
+      $('.contact-us__map').mouseenter(function() {
+         setTimeout(function(){$('.map__overlay').css('pointer-events','none')}, 3000);        
+      });
+      $('.contact-us__map').mouseleave(function() {
+         setTimeout(function(){$('.map__overlay').css('pointer-events','auto')}, 3000);        
+      });
+  
+     
      window.onclick = function(event) {
       if (!event.target.matches('.links__dropbtn')) {
         var dropdowns = document.getElementsByClassName("links__dropdown-content");
