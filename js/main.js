@@ -32,22 +32,8 @@ $(document).ready(function () {
       
       $('#links__dropdown-button').click(function() {
         $('#links__dropdown-content a').toggleClass("links__show");
-      });
+      });     
       
-      //map activating on click
-/*        $('.contact-us__map').click(function() {
-         $('.map__overlay').css('pointer-events','none');
-      });
-      $('.contact-us__map').mouseleave(function() {
-         $('.map__overlay').css('pointer-events','auto');
-      }); */  
-      //map activating auto
-      $('.contact-us__map').mouseenter(function() {
-         setTimeout(function(){$('.map__overlay').css('pointer-events','none')}, 3000);        
-      });
-      $('.contact-us__map').mouseleave(function() {
-         setTimeout(function(){$('.map__overlay').css('pointer-events','auto')}, 3000);        
-      });
   
      
      window.onclick = function(event) {
