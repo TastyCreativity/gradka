@@ -103,6 +103,7 @@
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   transition: 0.2s;
   padding-bottom: 10px;
+  line-height: 2;
 
   @include desktop {
     font-size: 1.5rem;

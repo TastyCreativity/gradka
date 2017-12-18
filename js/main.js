@@ -28,14 +28,14 @@ $(document).ready(function () {
               $('.navbar').css('background-color', 'rgba(128, 128, 128, 0.5)');
             }
           }
-        });    
-      
+        });
+
       $('#links__dropdown-button').click(function() {
         $('#links__dropdown-content a').toggleClass("links__show");
-      });     
-      
-  
-     
+      });
+
+
+
      window.onclick = function(event) {
       if (!event.target.matches('.links__dropbtn')) {
         var dropdowns = document.getElementsByClassName("links__dropdown-content");

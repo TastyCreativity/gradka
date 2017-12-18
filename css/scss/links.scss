@@ -110,6 +110,7 @@
   outline-color: rgba(#ffff00, 0.7);
   border: none;
   transition: 0.3s;
+  line-height: 2;
   @include desktop {
     font-size: 1.65rem;
   }
@@ -129,6 +130,7 @@
   &:after {
     width: 0;
     height: 0;
+    display: block;
     margin-right: 20px;
     align-self: center;
     vertical-align: middle;
