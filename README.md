@@ -1,1 +1,2 @@
-# doika-landing
+# Tasty Creativity
+Creative Commons Belarus
