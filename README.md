@@ -1,2 +1,2 @@
-# landing2
-Creative Commons affiliate page
+# Tasty Creativity
+Creative Commons Belarus
